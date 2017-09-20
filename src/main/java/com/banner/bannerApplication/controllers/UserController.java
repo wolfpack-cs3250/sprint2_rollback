@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 
 import com.banner.bannerApplication.entities.User;
 import com.banner.bannerApplication.repositories.UserRepository;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 @RequestMapping("userpage")
@@ -30,16 +31,4 @@ public class UserController {
         userRepository.save(n);
         return "Saved";
     }
-
-    /*
-    @GetMapping(path="/")
-    public String greeting(@RequestParam(value="name", required=false, defaultValue="World") String name, Model model) {
-        model.addAttribute("name", name );
-        return "userpage";
-    }
-
-//    @RequestMapping(method=POST)
-    public String greeting(@RequestParam(value="firstname", required=true) String name);
-
-    */
 }
