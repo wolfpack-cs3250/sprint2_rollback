@@ -12,4 +12,23 @@ public class IndexController {
         return "index";
     }
 
+    @RequestMapping("/create")
+    String create() {
+        return "create";
+    }
+    @RequestMapping("/delete")
+    String delete() {
+        return "delete";
+    }
+
+    @RequestMapping("/edit")
+    String edit() {
+        return "edit";
+    }
+
+    @RequestMapping("/update")
+    String update() {
+        return "update";
+    }
+
 }
