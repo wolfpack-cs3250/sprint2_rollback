@@ -31,4 +31,23 @@ public class UserController {
         userRepository.save(n);
         return "Saved";
     }
+/*
+    @GetMapping(path="/show")
+    public ModelAndView showUsers() {
+        List<User> user = userService.findAll;
+    }
+*/
+
+    /*
+    @GetMapping(path="/")
+    public String greeting(@RequestParam(value="name", required=false, defaultValue="World") String name, Model model) {
+        model.addAttribute("name", name );
+        return "userpage";
+    }
+
+//    @RequestMapping(method=POST)
+    public String greeting(@RequestParam(value="firstname", required=true) String name);
+
+    */
+
 }
