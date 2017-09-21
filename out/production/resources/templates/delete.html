@@ -13,9 +13,13 @@
 </head>
 <body style="background-color:#C0C0C0">
    <h1>Delete an Account</h1>
-    <form action="/delete" method="post">
-        <input type="hidden"  name="${_csrf.parameterName}"   value="${_csrf.token}"/>                                       
+   <div class="container">
+    <form action="/delete1">
+        <label for="id">ID to Remove: </label>
+        <input type="text" name="id" />
+        <button type="submit" >Remove</button>
 
   </form>
+   </div>
 </body>
 </html>
