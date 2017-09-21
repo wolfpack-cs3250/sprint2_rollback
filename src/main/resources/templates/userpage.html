@@ -1,11 +1,4 @@
-<!DOCTYPE HTML>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Getting Started: Serving Web Content</title>
-</head>
-<body>
-
+{{>header}}
 <h1>List of Users:</h1>
 
 <table>
@@ -17,10 +10,9 @@
     {{#allusers}}
     <tr>
         <td>{{id}}</td>
-        <td>{{firstname}}</td>
-        <td>{{lastname}}</td>
+        <td>{{firstName}}</td>
+        <td>{{lastName}}</td>
     </tr>
+    {{/allusers}}
 </table>
-
-</body>
-</html>
+{{>footer}}

@@ -23,13 +23,13 @@ public class UserController {
     private UserRepository userRepository;
 
     @GetMapping(path="/add")
-    public @ResponseBody String addNewUser (@RequestParam String firstname,
+    public String addNewUser (@RequestParam String firstname,
                                             @RequestParam String lastname) {
         User n = new User();
         n.setFirstName(firstname);
         n.setLastName(lastname);
         userRepository.save(n);
-        return "Saved";
+        return "index";
     }
 
     @GetMapping(path="")
@@ -38,24 +38,5 @@ public class UserController {
         model.addAttribute("allusers", allusers);
         return "userpage";
     }
-/*
-    @GetMapping(path="/show")
-    public ModelAndView showUsers() {
-        List<User> user = userService.findAll;
-    }
-*/
-
-    /*
-
-    @GetMapping(path="/")
-    public String greeting(@RequestParam(value="name", required=false, defaultValue="World") String name, Model model) {
-        model.addAttribute("name", name );
-        return "userpage";
-    }
-
-//    @RequestMapping(method=POST)
-    public String greeting(@RequestParam(value="firstname", required=true) String name);
-
-    */
 
 }
