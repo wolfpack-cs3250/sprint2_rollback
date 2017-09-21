@@ -23,12 +23,20 @@ public class UserController {
     private UserRepository userRepository;
 
     @GetMapping(path="/add")
-    public @ResponseBody String addNewUser (@RequestParam String firstname,
+    public String addNewUser (@RequestParam String firstname,
                                             @RequestParam String lastname) {
         User n = new User();
         n.setFirstName(firstname);
         n.setLastName(lastname);
         userRepository.save(n);
-        return "Saved";
+        return "index";
     }
+
+    @GetMapping(path="")
+    public String showall(Model model) {
+        Iterable<User> allusers = userRepository.findAll();
+        model.addAttribute("allusers", allusers);
+        return "userpage";
+    }
+
 }

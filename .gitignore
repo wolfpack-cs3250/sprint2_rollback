@@ -21,6 +21,8 @@
 *.tar
 *.zip
 
+# IDE junk
+
 # Logs and databases #
 ######################
 *.log

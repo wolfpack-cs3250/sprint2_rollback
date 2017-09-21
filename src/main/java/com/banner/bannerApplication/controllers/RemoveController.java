@@ -17,10 +17,10 @@ public class RemoveController {
     @Autowired
     private UserRepository userRepository;
     @GetMapping(path="")
-    public @ResponseBody String RemoveUser(@RequestParam String id) {
+    public String RemoveUser(@RequestParam String id) {
         User n = new User();
         n.setId(id);
         userRepository.delete(id);
-        return "Deleted";
+        return "index";
     }
 }
