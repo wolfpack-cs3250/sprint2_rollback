@@ -15,6 +15,9 @@ public class User {
     private String firstName;
     private String lastName;
 
+ public void setId(String id){
+     this.id=id;
+    }
     public String getFirstName() {
         return firstName;
     }
