@@ -31,6 +31,13 @@ public class UserController {
         userRepository.save(n);
         return "Saved";
     }
+
+    @GetMapping(path="")
+    public String showall(Model model) {
+        Iterable<User> allusers = userRepository.findAll();
+        model.addAttribute("allusers", allusers);
+        return "userpage";
+    }
 /*
     @GetMapping(path="/show")
     public ModelAndView showUsers() {
@@ -39,6 +46,7 @@ public class UserController {
 */
 
     /*
+
     @GetMapping(path="/")
     public String greeting(@RequestParam(value="name", required=false, defaultValue="World") String name, Model model) {
         model.addAttribute("name", name );
