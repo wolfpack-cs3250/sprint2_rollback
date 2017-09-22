@@ -13,9 +13,18 @@
 </head>
 <body style="background-color:#C0C0C0">
    <h1>Update an Account</h1>
-    <form action="/update" method="post">
-        <input type="hidden"  name="${_csrf.parameterName}"   value="${_csrf.token}"/>                                       
+   <div class="container">
+    <form action="userpage/update">
+        <label for="id">put in your student id:</label>
+        <input type="text" name="id" />
 
-  </form>
+        <label for="firstname">put updated first name here:</label>
+        <input type="text" name="firstname">
+
+        <label type="lastname">put updated last name here:</label>
+        <input type="text" name="lastname">
+        <button type="submit" >Update</button>
+   </form>
+   </div>
 </body>
 </html>
