@@ -2,7 +2,7 @@
 Sprint 2
 
 Notes:
-
+sal smells
 - Moustache as our templating engine
 
 - CRUD; Create, Read, Update, Delete
